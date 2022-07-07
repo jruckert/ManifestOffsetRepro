@@ -102,7 +102,7 @@ async Task<long> ProcessVideoOffset(IAzureMediaFactory mediaFactory, AzureConfig
                    assetFilterName);
                 await client.AssetFilters.DeleteAsync(configuration.ResourceGroup, configuration.AccountName, assetName,
                    assetFilterName);
-                recreate = streamingLocator.Filters.Any();
+                recreate = true;
             }
             catch
             {
